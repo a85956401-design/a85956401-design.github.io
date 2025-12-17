@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Rubik+Mono+One&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+   
+}
+
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav {
+    display: block;
+    background-color: rgba(18, 18, 18, 0.777);
+    border-radius: 16px;
+    width: 80%;
+    position: absolute;
+    top: 35px;
+}
+
+
+/* Стили для верхнего меню */
+nav .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav .menu li {
+    list-style: none; /* убрать точки */
+    margin-right: 25px;
+}
+
+
+.menu-item {
+    position: relative;
+}
+
+
+nav .submenu {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+
+nav .menu li:hover .submenu {
+  display: block;
+}
+
+
+
+body {
+    font-family: "Sofia Sans", sans-serif;
+}
+
+
+p {
+    color: black;
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+a {
+    color: rgba(0, 0, 0, 0.697);
+}
+
+
+a:visited {
+    color: black;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
+
+
+.small-text {
+    color: coral;
+    font-size: 10px;
+    font-style: italic;
+}
+
+
+/* Стили для карточки с пляжами */
+.card {
+    width: 270px;
+    border: 0px solid black;
+
+
+    padding-bottom: 10px;
+    margin: 16px;
+
+
+    border-radius: 16px;
+    box-shadow: 1px 1px 10px 4px rgba(158,158,158, 128);
+    cursor: pointer;
+
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+
+.card .card-text {
+    margin: 10px;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 10px 8px rgba(158,158,158, 128);
+}
+
+
+main {
+    padding: 24px;
+    font-size: 16px;
+}
+
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.gallery-grid img {
+    border-radius: 16px;
+}
+
+/* Стили для страницы парков */
+.parks-gallery h2 {
+    color: #2d5016;
+    font-family: "Caveat", cursive;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(45, 80, 22, 0.3);
+}
+
+.parks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.park-card {
+    background: linear-gradient(145deg, #f0f8e8, #e8f5e8);
+    border: 2px solid #a8d5a8;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    box-shadow: 
+        0 8px 25px rgba(45, 80, 22, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.park-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4a7c59, #6b8e6b, #8fbc8f);
+    border-radius: 20px 20px 0 0;
+}
+
+.park-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 15px 35px rgba(45, 80, 22, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-color: #6b8e6b;
+}
+
+.park-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.park-card:hover img {
+    transform: scale(1.05);
+}
+
+.park-card-content {
+    padding: 20px;
+}
+
+.park-card h3 {
+    color: #2d5016;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-family: "Caveat", cursive;
+    text-shadow: 1px 1px 2px rgba(45, 80, 22, 0.2);
+}
+
+.park-card p {
+    color: #3a3a3a;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.park-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.feature {
+    background: linear-gradient(145deg, #e8f5e8, #d4e6d4);
+    color: #2d5016;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #a8d5a8;
+    box-shadow: 0 2px 4px rgba(45, 80, 22, 0.1);
+    transition: all 0.2s ease;
+}
+
+.feature:hover {
+    background: linear-gradient(145deg, #d4e6d4, #c1d8c1);
+    transform: translateY(-1px);
+}
+
+.park-price {
+    background: linear-gradient(135deg, #4a7c59, #6b8e6b);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    box-shadow: 0 3px 10px rgba(45, 80, 22, 0.3);
+}
+
+/* Секция советов */
+/* Заголовок про отели */
+.hotels-section-header {
+    background: linear-gradient(135deg, #f0f8e8, #e8f5e8);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #a8d5a8;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(45, 80, 22, 0.1);
+}
+
+.hotels-section-header h2 {
+    color: #2d5016;
+    font-family: "Caveat", cursive;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(45, 80, 22, 0.2);
+}
+
+.hotels-description {
+    color: #4a4a4a;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Секция советов */
+.park-tips {
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, #f0f8e8, #e8f5e8);
+    border-radius: 25px;
+    border: 2px solid #a8d5a8;
+}
+
+.park-tips h2 {
+    color: #2d5016;
+    font-family: "Caveat", cursive;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(45, 80, 22, 0.3);
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.tip-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(45, 80, 22, 0.1);
+    border-left: 5px solid #6b8e6b;
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(45, 80, 22, 0.15);
+}
+
+.tip-card h3 {
+    color: #2d5016;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.tip-card p {
+    color: #4a4a4a;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .parks-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tips-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .park-tips {
+        padding: 25px;
+        margin-top: 40px;
+    }
+    
+    .park-card h3 {
+        font-size: 1.5em;
+    }
+    
+    .park-card p {
+        font-size: 14px;
+    }
+}
+
